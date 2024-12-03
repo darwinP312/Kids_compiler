@@ -5,8 +5,8 @@ program: 'Empecemos!' statement* 'Hasta luego!';
 
 //Sentencias
 statement
-    : varDeclaration      # DeclaracionDeVariable
-    | functionDeclaration # DeclaracionDeFuncion
+    : varDeclaration      # DeclaracionVariable
+    | functionDeclaration # DeclaracionFuncion
     | ifStatement         # Condicional
     | loopStatement       # Ciclo
     | printStatement      # Escribir
@@ -14,7 +14,7 @@ statement
     ;
 
 //Declaraciones
-varDeclaration: type ID '=' expr ';';
+varDeclaration: tipo ID '=' expr ';';
 functionDeclaration: 'hacer esto' ID '(' ')' '{' statement* '}';
 
 //Condicionales y bucles
@@ -22,17 +22,17 @@ ifStatement: 'Si pasa esto' '(' expr ')' '{' statement* '}' ('Sino' '{' statemen
 loopStatement: 'Repetir hasta que' '(' expr ')' '{' statement* '}';
 
 //Tipos de variables y expresiones
-type: 'numero' | 'texto' | 'logico';
+tipo: 'numero' | 'texto' | 'logico';
 
 expr
     : expr ('*' | '/') expr               # MulDiv
-    | expr ('+' | '-') expr               # AddSub
+    | expr ('+' | '-') expr               # SumaResta
     | expr ('>' | '<' | '>=' | '<=' | '==' | '!=') expr # Comparacion
-    | '(' expr ')'                        # Parenthesis
-    | ID                                  # Identifier
-    | INT                                 # IntLiteral
-    | STRING                              # StringLiteral
-    | BOOL                                # BooleanLiteral
+    | '(' expr ')'                        # Parentesis
+    | ID                                  # ID
+    | INT                                 # Int
+    | STRING                              # String
+    | BOOL                                # Boolean
     ;
 
 //Para imprimir

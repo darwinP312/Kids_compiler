@@ -1,0 +1,16 @@
+Empecemos!
+
+numero edad = 10;
+texto nombre = "Juan";
+
+Si pasa esto (edad > 5) {
+    
+    escribir ("Mayor a 5");
+
+} Sino {
+    
+    escribir ("Menor o igual a 5");
+    
+}
+
+Hasta luego!
