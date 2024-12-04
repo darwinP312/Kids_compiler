@@ -116,21 +116,39 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SimpleLangParser#Comparacion.
-    def enterComparacion(self, ctx:SimpleLangParser.ComparacionContext):
+    # Enter a parse tree produced by SimpleLangParser#aumentar.
+    def enterAumentar(self, ctx:SimpleLangParser.AumentarContext):
         pass
 
-    # Exit a parse tree produced by SimpleLangParser#Comparacion.
-    def exitComparacion(self, ctx:SimpleLangParser.ComparacionContext):
+    # Exit a parse tree produced by SimpleLangParser#aumentar.
+    def exitAumentar(self, ctx:SimpleLangParser.AumentarContext):
         pass
 
 
-    # Enter a parse tree produced by SimpleLangParser#MulDiv.
-    def enterMulDiv(self, ctx:SimpleLangParser.MulDivContext):
+    # Enter a parse tree produced by SimpleLangParser#disminuir.
+    def enterDisminuir(self, ctx:SimpleLangParser.DisminuirContext):
         pass
 
-    # Exit a parse tree produced by SimpleLangParser#MulDiv.
-    def exitMulDiv(self, ctx:SimpleLangParser.MulDivContext):
+    # Exit a parse tree produced by SimpleLangParser#disminuir.
+    def exitDisminuir(self, ctx:SimpleLangParser.DisminuirContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Or.
+    def enterOr(self, ctx:SimpleLangParser.OrContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Or.
+    def exitOr(self, ctx:SimpleLangParser.OrContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#MenorIgualQue.
+    def enterMenorIgualQue(self, ctx:SimpleLangParser.MenorIgualQueContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#MenorIgualQue.
+    def exitMenorIgualQue(self, ctx:SimpleLangParser.MenorIgualQueContext):
         pass
 
 
@@ -143,15 +161,6 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SimpleLangParser#ID.
-    def enterID(self, ctx:SimpleLangParser.IDContext):
-        pass
-
-    # Exit a parse tree produced by SimpleLangParser#ID.
-    def exitID(self, ctx:SimpleLangParser.IDContext):
-        pass
-
-
     # Enter a parse tree produced by SimpleLangParser#String.
     def enterString(self, ctx:SimpleLangParser.StringContext):
         pass
@@ -161,12 +170,12 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SimpleLangParser#Boolean.
-    def enterBoolean(self, ctx:SimpleLangParser.BooleanContext):
+    # Enter a parse tree produced by SimpleLangParser#MayorIgualQue.
+    def enterMayorIgualQue(self, ctx:SimpleLangParser.MayorIgualQueContext):
         pass
 
-    # Exit a parse tree produced by SimpleLangParser#Boolean.
-    def exitBoolean(self, ctx:SimpleLangParser.BooleanContext):
+    # Exit a parse tree produced by SimpleLangParser#MayorIgualQue.
+    def exitMayorIgualQue(self, ctx:SimpleLangParser.MayorIgualQueContext):
         pass
 
 
@@ -179,12 +188,66 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by SimpleLangParser#SumaResta.
-    def enterSumaResta(self, ctx:SimpleLangParser.SumaRestaContext):
+    # Enter a parse tree produced by SimpleLangParser#And.
+    def enterAnd(self, ctx:SimpleLangParser.AndContext):
         pass
 
-    # Exit a parse tree produced by SimpleLangParser#SumaResta.
-    def exitSumaResta(self, ctx:SimpleLangParser.SumaRestaContext):
+    # Exit a parse tree produced by SimpleLangParser#And.
+    def exitAnd(self, ctx:SimpleLangParser.AndContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#DiferenteDe.
+    def enterDiferenteDe(self, ctx:SimpleLangParser.DiferenteDeContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#DiferenteDe.
+    def exitDiferenteDe(self, ctx:SimpleLangParser.DiferenteDeContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#IgualQue.
+    def enterIgualQue(self, ctx:SimpleLangParser.IgualQueContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#IgualQue.
+    def exitIgualQue(self, ctx:SimpleLangParser.IgualQueContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#ID.
+    def enterID(self, ctx:SimpleLangParser.IDContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#ID.
+    def exitID(self, ctx:SimpleLangParser.IDContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#MayorQue.
+    def enterMayorQue(self, ctx:SimpleLangParser.MayorQueContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#MayorQue.
+    def exitMayorQue(self, ctx:SimpleLangParser.MayorQueContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Boolean.
+    def enterBoolean(self, ctx:SimpleLangParser.BooleanContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Boolean.
+    def exitBoolean(self, ctx:SimpleLangParser.BooleanContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#MenorQue.
+    def enterMenorQue(self, ctx:SimpleLangParser.MenorQueContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#MenorQue.
+    def exitMenorQue(self, ctx:SimpleLangParser.MenorQueContext):
         pass
 
 

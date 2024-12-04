@@ -44,14 +44,14 @@ WS=31
 'numero'=13
 'texto'=14
 'logico'=15
-'*'=16
-'/'=17
-'+'=18
-'-'=19
-'>'=20
-'<'=21
-'>='=22
-'<='=23
-'=='=24
-'!='=25
+'aumentar'=16
+'disminuir'=17
+'y'=18
+'o'=19
+'menor que'=20
+'mayor que'=21
+'igual que'=22
+'menor o igual que'=23
+'mayor o igual que'=24
+'diferente de'=25
 'escribir'=26

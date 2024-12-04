@@ -1,7 +1,20 @@
 Empecemos!
 
-numero suma = 2+3;
+numero edad = 500;
+texto nombre = "Darwin";
 
-escribir(suma);
+Si pasa esto (edad mayor que 17) {
+    
+    escribir ("Es mayor de edad");
+
+} Sino {
+    
+    escribir ("Es menor de edad");
+    
+}
+
+Si pasa esto (edad igual que 500){
+    escribir("No deberias estar vivo");
+}
 
 Hasta luego!

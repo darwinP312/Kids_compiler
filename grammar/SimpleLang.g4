@@ -24,15 +24,24 @@ loopStatement: 'Repetir hasta que' '(' expr ')' '{' statement* '}';
 //Tipos de variables y expresiones
 tipo: 'numero' | 'texto' | 'logico';
 
+//++ y --
+aumentar: 'aumentar' '(' ID ')';
+disminuir: 'disminuir' '(' ID ')';
+
 expr
-    : expr ('*' | '/') expr                     # MulDiv
-    | expr ('+' | '-') expr                     # SumaResta
-    | expr ('>' | '<' | '>=' | '<=' | '==' | '!=') expr # Comparacion
-    | '(' expr ')'                              # Parentesis
-    | ID                                         # ID
-    | INT                                        # Int
-    | STRING                                     # String
-    | BOOL                                       # Boolean
+    : expr 'y' expr                       # And
+    | expr 'o' expr                       # Or
+    | expr 'menor que' expr               # MenorQue
+    | expr 'mayor que' expr               # MayorQue
+    | expr 'igual que' expr               # IgualQue
+    | expr 'menor o igual que' expr       # MenorIgualQue
+    | expr 'mayor o igual que' expr       # MayorIgualQue
+    | expr 'diferente de' expr            # DiferenteDe
+    | '(' expr ')'                        # Parentesis
+    | ID                                  # ID
+    | INT                                 # Int
+    | STRING                              # String
+    | BOOL                                # Boolean
     ;
 
 //Para imprimir
