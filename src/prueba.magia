@@ -1,16 +1,7 @@
 Empecemos!
 
-numero edad = 10;
-texto nombre = "Juan";
+numero suma = 2+3;
 
-Si pasa esto (edad > 5) {
-    
-    escribir ("Mayor a 5");
-
-} Sino {
-    
-    escribir ("Menor o igual a 5");
-    
-}
+escribir(suma);
 
 Hasta luego!

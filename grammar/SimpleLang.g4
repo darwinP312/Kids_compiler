@@ -1,6 +1,6 @@
 grammar SimpleLang;
 
-//Inicio y fin del programa
+//Regla para el programa
 program: 'Empecemos!' statement* 'Hasta luego!';
 
 //Sentencias
@@ -25,14 +25,14 @@ loopStatement: 'Repetir hasta que' '(' expr ')' '{' statement* '}';
 tipo: 'numero' | 'texto' | 'logico';
 
 expr
-    : expr ('*' | '/') expr               # MulDiv
-    | expr ('+' | '-') expr               # SumaResta
+    : expr ('*' | '/') expr                     # MulDiv
+    | expr ('+' | '-') expr                     # SumaResta
     | expr ('>' | '<' | '>=' | '<=' | '==' | '!=') expr # Comparacion
-    | '(' expr ')'                        # Parentesis
-    | ID                                  # ID
-    | INT                                 # Int
-    | STRING                              # String
-    | BOOL                                # Boolean
+    | '(' expr ')'                              # Parentesis
+    | ID                                         # ID
+    | INT                                        # Int
+    | STRING                                     # String
+    | BOOL                                       # Boolean
     ;
 
 //Para imprimir
