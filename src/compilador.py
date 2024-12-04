@@ -13,11 +13,13 @@ class SimpleLangVisitor(ParseTreeVisitor):
             self.visit(statement)
 
     def visitVarDeclaration(self, ctx: SimpleLangParser.VarDeclarationContext):
-        var_name = ctx.ID().getText()
-        value = ctx.expr().getText()
-        value = self.replace_logical_operators(value)
-        python_code = f"{var_name} = {value}"
-        exec(python_code, globals())
+        var_name = ctx.ID().getText() 
+        value = ctx.expr().getText()  
+        value = self.replace_logical_operators(value)  
+        value = self.translate_statement(value)  
+        python_code = f"{var_name} = {value}"  
+        exec(python_code, globals()) 
+
 
     def visitIfStatement(self, ctx: SimpleLangParser.IfStatementContext):
         condition = ctx.expr().getText()
@@ -29,36 +31,59 @@ class SimpleLangVisitor(ParseTreeVisitor):
             python_code += f"\nelse:\n    {else_body.replace('\\n', '\\n    ')}"
         exec(python_code, globals())
 
+    def visitLoopStatement(self, ctx: SimpleLangParser.LoopStatementContext):
+        condition = ctx.expr().getText()
+
+        condition = self.replace_logical_operators(condition)
+        
+        loop_body = "\n    ".join([self.translate_statement(statement.getText()) for statement in ctx.statement()])
+        
+        python_code = f"while {condition}:\n    {loop_body}"
+        
+        exec(python_code, globals())
+
+
     def visitPrintStatement(self, ctx: SimpleLangParser.PrintStatementContext):
         value = ctx.expr().getText()
         value = self.replace_logical_operators(value)
         python_code = f"print({value})"
         exec(python_code, globals())
 
-    def visitAumentar(self, ctx: SimpleLangParser.AumentarContext):
-        var_name = ctx.ID().getText()
-        python_code = f"{var_name} += 1"
-        exec(python_code, globals())
-
-    def visitDisminuir(self, ctx: SimpleLangParser.DisminuirContext):
-        var_name = ctx.ID().getText()
-        python_code = f"{var_name} -= 1"
-        exec(python_code, globals())
-
     def translate_statement(self, statement_text):
         if "escribir" in statement_text:
             return statement_text.replace("escribir", "print")
+        
+        if "aumentar" in statement_text:
+            statement_text = statement_text.replace("aumentar", "").strip("()")
+            statement_text = statement_text.replace(");", "").strip("()")
+            return f"{statement_text} += 1;"
+        
+        if "disminuir" in statement_text:
+            statement_text = statement_text.replace("disminuir", "").strip("()")
+            statement_text = statement_text.replace(");", "").strip("()")
+            return f"{statement_text} -= 1"
+        
+        if "potencia" in statement_text:
+            statement_text = statement_text.replace("potencia", "")
+            statement_text = statement_text.replace(");", "").strip("()")
+            return f"{statement_text} ** 2" 
+        
+        if "raizCuadrada" in statement_text:
+            statement_text = statement_text.replace("raizCuadrada", "")
+            statement_text = statement_text.replace(");", "").strip("()")
+            return f"{statement_text} ** 0.5" 
         return statement_text
 
     def replace_logical_operators(self, expression):
         expression = expression.replace('igual que', '==')
         expression = expression.replace('menor que', '<')
         expression = expression.replace('mayor que', '>')
-        expression = expression.replace('menor o igual que', '<=')
-        expression = expression.replace('mayor o igual que', '>=')
+        expression = expression.replace('menor igual a', '<=')
+        expression = expression.replace('mayor igual a', '>=')
         expression = expression.replace('diferente de', '!=')
         expression = expression.replace('y', 'and')
-        expression = expression.replace('o', 'or')
+        # expression = expression.replace('o', 'or')
+        
         return expression
 
 

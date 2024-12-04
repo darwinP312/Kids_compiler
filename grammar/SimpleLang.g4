@@ -10,6 +10,10 @@ statement
     | ifStatement         # Condicional
     | loopStatement       # Ciclo
     | printStatement      # Escribir
+    | aumentar            # AumentarEnUno
+    | disminuir           # DisminuirEnUno
+    | potencia            # Potencias
+    | raizCuadrada        # RaizCua
     | expr ';'            # Expresion
     ;
 
@@ -19,14 +23,18 @@ functionDeclaration: 'hacer esto' ID '(' ')' '{' statement* '}';
 
 //Condicionales y bucles
 ifStatement: 'Si pasa esto' '(' expr ')' '{' statement* '}' ('Sino' '{' statement* '}')?;
-loopStatement: 'Repetir hasta que' '(' expr ')' '{' statement* '}';
+loopStatement: 'Repetir mientras que' '(' expr ')' '{' statement* '}';
 
 //Tipos de variables y expresiones
 tipo: 'numero' | 'texto' | 'logico';
 
 //++ y --
-aumentar: 'aumentar' '(' ID ')';
-disminuir: 'disminuir' '(' ID ')';
+aumentar: 'aumentar' '(' ID ')' ';';
+disminuir: 'disminuir' '(' ID ')' ';';
+
+//Potencia y raiz
+potencia: 'potencia' '(' ID ')' ';';
+raizCuadrada: 'raizCuadrada' '(' ID ')' ';';
 
 expr
     : expr 'y' expr                       # And
@@ -34,10 +42,14 @@ expr
     | expr 'menor que' expr               # MenorQue
     | expr 'mayor que' expr               # MayorQue
     | expr 'igual que' expr               # IgualQue
-    | expr 'menor o igual que' expr       # MenorIgualQue
-    | expr 'mayor o igual que' expr       # MayorIgualQue
+    | expr 'menor igual a' expr           # MenorIgualQue
+    | expr 'menor igual a' expr           # MayorIgualQue
     | expr 'diferente de' expr            # DiferenteDe
     | '(' expr ')'                        # Parentesis
+    | expr '*' expr                       # Suma
+    | expr '/' expr                       # Resta
+    | expr '+' expr                       # Multiplicacion
+    | expr '-' expr                       # Division
     | ID                                  # ID
     | INT                                 # Int
     | STRING                              # String

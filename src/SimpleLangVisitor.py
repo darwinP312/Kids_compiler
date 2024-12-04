@@ -39,6 +39,26 @@ class SimpleLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SimpleLangParser#AumentarEnUno.
+    def visitAumentarEnUno(self, ctx:SimpleLangParser.AumentarEnUnoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#DisminuirEnUno.
+    def visitDisminuirEnUno(self, ctx:SimpleLangParser.DisminuirEnUnoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#Potencias.
+    def visitPotencias(self, ctx:SimpleLangParser.PotenciasContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#RaizCua.
+    def visitRaizCua(self, ctx:SimpleLangParser.RaizCuaContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SimpleLangParser#Expresion.
     def visitExpresion(self, ctx:SimpleLangParser.ExpresionContext):
         return self.visitChildren(ctx)
@@ -79,6 +99,16 @@ class SimpleLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SimpleLangParser#potencia.
+    def visitPotencia(self, ctx:SimpleLangParser.PotenciaContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#raizCuadrada.
+    def visitRaizCuadrada(self, ctx:SimpleLangParser.RaizCuadradaContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SimpleLangParser#Or.
     def visitOr(self, ctx:SimpleLangParser.OrContext):
         return self.visitChildren(ctx)
@@ -99,6 +129,11 @@ class SimpleLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SimpleLangParser#Multiplicacion.
+    def visitMultiplicacion(self, ctx:SimpleLangParser.MultiplicacionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SimpleLangParser#MayorIgualQue.
     def visitMayorIgualQue(self, ctx:SimpleLangParser.MayorIgualQueContext):
         return self.visitChildren(ctx)
@@ -106,6 +141,11 @@ class SimpleLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SimpleLangParser#Int.
     def visitInt(self, ctx:SimpleLangParser.IntContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#Suma.
+    def visitSuma(self, ctx:SimpleLangParser.SumaContext):
         return self.visitChildren(ctx)
 
 
@@ -121,6 +161,11 @@ class SimpleLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SimpleLangParser#IgualQue.
     def visitIgualQue(self, ctx:SimpleLangParser.IgualQueContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#Division.
+    def visitDivision(self, ctx:SimpleLangParser.DivisionContext):
         return self.visitChildren(ctx)
 
 
@@ -141,6 +186,11 @@ class SimpleLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SimpleLangParser#MenorQue.
     def visitMenorQue(self, ctx:SimpleLangParser.MenorQueContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#Resta.
+    def visitResta(self, ctx:SimpleLangParser.RestaContext):
         return self.visitChildren(ctx)
 
 

@@ -17,4 +17,20 @@ Si pasa esto (edad igual que 500){
     escribir("No deberias estar vivo");
 }
 
+numero cont = 1;
+escribir("---------------");
+
+Repetir mientras que (cont menor igual a 5) {
+    escribir (cont);
+    aumentar(cont);
+}
+
+escribir("---------------");
+
+numero poten = potencia(5);
+numero raiz = raizCuadrada(81);
+
+escribir(poten);
+escribir(raiz);
+
 Hasta luego!

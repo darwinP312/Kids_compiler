@@ -62,6 +62,42 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SimpleLangParser#AumentarEnUno.
+    def enterAumentarEnUno(self, ctx:SimpleLangParser.AumentarEnUnoContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#AumentarEnUno.
+    def exitAumentarEnUno(self, ctx:SimpleLangParser.AumentarEnUnoContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#DisminuirEnUno.
+    def enterDisminuirEnUno(self, ctx:SimpleLangParser.DisminuirEnUnoContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#DisminuirEnUno.
+    def exitDisminuirEnUno(self, ctx:SimpleLangParser.DisminuirEnUnoContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Potencias.
+    def enterPotencias(self, ctx:SimpleLangParser.PotenciasContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Potencias.
+    def exitPotencias(self, ctx:SimpleLangParser.PotenciasContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#RaizCua.
+    def enterRaizCua(self, ctx:SimpleLangParser.RaizCuaContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#RaizCua.
+    def exitRaizCua(self, ctx:SimpleLangParser.RaizCuaContext):
+        pass
+
+
     # Enter a parse tree produced by SimpleLangParser#Expresion.
     def enterExpresion(self, ctx:SimpleLangParser.ExpresionContext):
         pass
@@ -134,6 +170,24 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SimpleLangParser#potencia.
+    def enterPotencia(self, ctx:SimpleLangParser.PotenciaContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#potencia.
+    def exitPotencia(self, ctx:SimpleLangParser.PotenciaContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#raizCuadrada.
+    def enterRaizCuadrada(self, ctx:SimpleLangParser.RaizCuadradaContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#raizCuadrada.
+    def exitRaizCuadrada(self, ctx:SimpleLangParser.RaizCuadradaContext):
+        pass
+
+
     # Enter a parse tree produced by SimpleLangParser#Or.
     def enterOr(self, ctx:SimpleLangParser.OrContext):
         pass
@@ -170,6 +224,15 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SimpleLangParser#Multiplicacion.
+    def enterMultiplicacion(self, ctx:SimpleLangParser.MultiplicacionContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Multiplicacion.
+    def exitMultiplicacion(self, ctx:SimpleLangParser.MultiplicacionContext):
+        pass
+
+
     # Enter a parse tree produced by SimpleLangParser#MayorIgualQue.
     def enterMayorIgualQue(self, ctx:SimpleLangParser.MayorIgualQueContext):
         pass
@@ -185,6 +248,15 @@ class SimpleLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by SimpleLangParser#Int.
     def exitInt(self, ctx:SimpleLangParser.IntContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Suma.
+    def enterSuma(self, ctx:SimpleLangParser.SumaContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Suma.
+    def exitSuma(self, ctx:SimpleLangParser.SumaContext):
         pass
 
 
@@ -212,6 +284,15 @@ class SimpleLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by SimpleLangParser#IgualQue.
     def exitIgualQue(self, ctx:SimpleLangParser.IgualQueContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Division.
+    def enterDivision(self, ctx:SimpleLangParser.DivisionContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Division.
+    def exitDivision(self, ctx:SimpleLangParser.DivisionContext):
         pass
 
 
@@ -248,6 +329,15 @@ class SimpleLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by SimpleLangParser#MenorQue.
     def exitMenorQue(self, ctx:SimpleLangParser.MenorQueContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#Resta.
+    def enterResta(self, ctx:SimpleLangParser.RestaContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#Resta.
+    def exitResta(self, ctx:SimpleLangParser.RestaContext):
         pass
 
 
