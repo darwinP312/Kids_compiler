@@ -242,6 +242,15 @@ class SimpleLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SimpleLangParser#EscribirDos.
+    def enterEscribirDos(self, ctx:SimpleLangParser.EscribirDosContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#EscribirDos.
+    def exitEscribirDos(self, ctx:SimpleLangParser.EscribirDosContext):
+        pass
+
+
     # Enter a parse tree produced by SimpleLangParser#Int.
     def enterInt(self, ctx:SimpleLangParser.IntContext):
         pass
@@ -257,6 +266,24 @@ class SimpleLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by SimpleLangParser#Suma.
     def exitSuma(self, ctx:SimpleLangParser.SumaContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#PotenciasExpr.
+    def enterPotenciasExpr(self, ctx:SimpleLangParser.PotenciasExprContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#PotenciasExpr.
+    def exitPotenciasExpr(self, ctx:SimpleLangParser.PotenciasExprContext):
+        pass
+
+
+    # Enter a parse tree produced by SimpleLangParser#RaizCuaExpr.
+    def enterRaizCuaExpr(self, ctx:SimpleLangParser.RaizCuaExprContext):
+        pass
+
+    # Exit a parse tree produced by SimpleLangParser#RaizCuaExpr.
+    def exitRaizCuaExpr(self, ctx:SimpleLangParser.RaizCuaExprContext):
         pass
 
 

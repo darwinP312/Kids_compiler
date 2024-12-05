@@ -1,11 +1,12 @@
 Empecemos!
 
+//Este es un comentario
 numero edad = 500;
 texto nombre = "Darwin";
 
 Si pasa esto (edad mayor que 17) {
     
-    escribir ("Es mayor de edad");
+    escribir (nombre,"Eres mayor de edad");
 
 } Sino {
     
@@ -30,7 +31,7 @@ escribir("---------------");
 numero poten = potencia(5);
 numero raiz = raizCuadrada(81);
 
-escribir(poten);
-escribir(raiz);
+escribir(potencia (10));
+escribir(raiz , poten, "hola");
 
 Hasta luego!

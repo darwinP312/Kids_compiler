@@ -37,8 +37,8 @@ potencia: 'potencia' '(' ID ')' ';';
 raizCuadrada: 'raizCuadrada' '(' ID ')' ';';
 
 expr
-    : expr 'y' expr                       # And
-    | expr 'o' expr                       # Or
+    : expr 'y que' expr                       # And
+    | expr 'o que' expr                       # Or
     | expr 'menor que' expr               # MenorQue
     | expr 'mayor que' expr               # MayorQue
     | expr 'igual que' expr               # IgualQue
@@ -46,6 +46,8 @@ expr
     | expr 'menor igual a' expr           # MayorIgualQue
     | expr 'diferente de' expr            # DiferenteDe
     | '(' expr ')'                        # Parentesis
+    | 'potencia' '(' expr ')'             # PotenciasExpr
+    | 'raizCuadrada' '(' expr ')'         # RaizCuaExpr
     | expr '*' expr                       # Suma
     | expr '/' expr                       # Resta
     | expr '+' expr                       # Multiplicacion
@@ -54,10 +56,14 @@ expr
     | INT                                 # Int
     | STRING                              # String
     | BOOL                                # Boolean
+    | expr ',' expr                       # EscribirDos
     ;
 
 //Para imprimir
 printStatement: 'escribir' '(' expr ')' ';';
+
+//Comentarios
+LINE_COMMENT: '//' ~[\r\n]* -> skip;
 
 //Tokens
 ID: [a-zA-Z_][a-zA-Z0-9_]*;

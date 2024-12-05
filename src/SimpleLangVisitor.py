@@ -139,6 +139,11 @@ class SimpleLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SimpleLangParser#EscribirDos.
+    def visitEscribirDos(self, ctx:SimpleLangParser.EscribirDosContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SimpleLangParser#Int.
     def visitInt(self, ctx:SimpleLangParser.IntContext):
         return self.visitChildren(ctx)
@@ -146,6 +151,16 @@ class SimpleLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SimpleLangParser#Suma.
     def visitSuma(self, ctx:SimpleLangParser.SumaContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#PotenciasExpr.
+    def visitPotenciasExpr(self, ctx:SimpleLangParser.PotenciasExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#RaizCuaExpr.
+    def visitRaizCuaExpr(self, ctx:SimpleLangParser.RaizCuaExprContext):
         return self.visitChildren(ctx)
 
 
